@@ -62,10 +62,127 @@
             text-align: center;
             padding: 20px 0;
         }
+
+        #snowflakeContainer {
+                position: absolute;
+                left: 0;
+                top: 0;
+                pointer-events: none
+            }
+
+            .snowflake {
+                position: fixed;
+                user-select: none;
+                z-index: 1000;
+                color: #ffffff;
+                opacity: .8;
+                pointer-events: none
+            }
+
+            @keyframes fall {
+                0% {
+                    top: -10%
+                }
+                100% {
+                    top: 100%
+                }
+            }
+            .m1 {
+            position: fixed;
+            left: 1%;
+            width: auto;
+            height: 100%;
+            top: 1%;
+            color: #000;
+        }
+
+        .m2 {
+            position: fixed;
+            right: 1%;
+            width: auto;
+            height: 100%;
+            top: 1%;
+            color: #000;
+        }
     </style>
 </head>
 
+<div id="snowflakeContainer"></div>
+<script>
+    const snowflakeContainer = document.getElementById("snowflakeContainer");
+    let snowflakes = [];
+    const numberOfSnowflakes = 20,
+        characters = ["❤️", "💕"];
+
+    function createSnowflake() {
+        let e = document.createElement("div");
+        e.className = "snowflake", e.textContent = characters[Math.floor(Math.random() * characters.length)], e.style.fontSize = `${12+20*Math.random()}px`, e.style.left = `${100*Math.random()}%`, e.style.animationDuration = `${5+5*Math.random()}s`, e.style.animationName = "fall", e.style.animationIterationCount = "infinite", snowflakeContainer.appendChild(e)
+    }
+
+    function updateSnowflakes() {
+        snowflakes.forEach(e => {
+            parseInt(e.style.top, 10) > window.innerHeight && (e.style.top = "-25px")
+        }), requestAnimationFrame(updateSnowflakes)
+    }
+    for (let i = 0; i < 30; i++) createSnowflake(), snowflakes.push(snowflakeContainer.lastChild);
+    updateSnowflakes();
+</script>
 <body>
+
+    <marquee class="m1" behavior="scroll" direction="up" scrolldelay="0"> <br>
+        &#x1F493;<br><br>
+        &#x1F495;<br><br>
+        &#x1F496;<br><br>
+        &#x1F497;<br><br>
+        &#x1F498;<br><br>
+        &#x1F499;<br><br>
+        &#x1F49A;<br><br>
+        &#x1F49B;<br><br>
+        &#x1F493;<br><br>
+        &#x1F495;<br><br>
+        &#x1F496;<br><br>
+        &#x1F497;<br><br>
+        &#x1F498;<br><br>
+        &#x1F499;<br><br>
+        &#x1F49A;<br><br>
+        &#x1F49B;<br><br>
+        &#x1F493;<br><br>
+        &#x1F495;<br><br>
+        &#x1F496;<br><br>
+        &#x1F497;<br><br>
+        &#x1F498;<br><br>
+        &#x1F499;<br><br>
+        &#x1F49A;<br><br>
+        &#x1F49B;<br><br>
+    </marquee>
+    <marquee class="m2" behavior="scroll" direction="down" scrolldelay="0"> <br>
+        &#x1F493;<br><br>
+        &#x1F495;<br><br>
+        &#x1F496;<br><br>
+        &#x1F497;<br><br>
+        &#x1F498;<br><br>
+        &#x1F499;<br><br>
+        &#x1F49A;<br><br>
+        &#x1F49B;<br><br>
+        &#x1F493;<br><br>
+        &#x1F495;<br><br>
+        &#x1F496;<br><br>
+        &#x1F497;<br><br>
+        &#x1F498;<br><br>
+        &#x1F499;<br><br>
+        &#x1F49A;<br><br>
+        &#x1F49B;<br><br>
+        &#x1F493;<br><br>
+        &#x1F495;<br><br>
+        &#x1F496;<br><br>
+        &#x1F497;<br><br>
+        &#x1F498;<br><br>
+        &#x1F499;<br><br>
+        &#x1F49A;<br><br>
+        &#x1F49B;<br><br>
+    </marquee>
+    
+
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
@@ -94,13 +211,23 @@
     <div class="container mt-5" id="biography">
         <h1>Biography</h1>
 
-        <p>Jesse and Lillian, two hearts entwined in the dance of love, met four years ago beneath the soft glow of a romantic evening. From that moment, their destinies intertwined, crafting a tale of love so pure and enduring, it's as timeless as the stars above.</p>
-    </div>
+<p>Jesse and Lillian, their hearts drawn together like magnets, crossed paths four years ago. In that encounter, their souls connected, setting the stage for a love story that would stand the test of time.
+
+Strangers at first, they exchanged quick glances, unaware of the journey fate had in store for them. 
+
+</p><br><p>But it was not until they became best friends that Jesse and Lillian truly realised the depth of their connection. They confided in each other, supported each other, and cherished each other's company in ways they never thought possible. 
+
+
+
+
+
+</p>   </div>
 
     <div class="container mt-5" id="songs">
         <h2>The Song</h2>
-        <p>Amidst the symphony of life's melodies, Jesse crafted a ballad of love, a serenade titled <strong>"Akamuli ka Lillie,"</strong> a testament to the beauty and grace that is Lillian. With every note sung, he poured his heart into each word, painting a portrait of admiration and adoration towards her.</p>
-        <br>
+<p>In the quiet moments of solitude, Jesse poured his heart into the creation of his love song, channeling every tiny bit of his feelings and emotions into its melody. <br><p></p>Each note carried the weight of his admiration, each verse a reflection of his adoration towards Lillian. Through music, Jesse sought to capture the essence of their connection, immortalising their love story in the timeless lyrics of <strong>"Akamuli ka Lillie."</strong>
+
+</p>       <br>
         <div class="audio-container">
             <audio controls style="max-width: 100%;">
                 <source src="Akamuli ka Lillie.mp3" type="audio/mpeg">
@@ -125,12 +252,13 @@
 
     <div class="container mt-5" id="books">
         <h2>The Book</h2>
-        <p>In the pages of <strong>"Love at Last Sight,"</strong> Jesse weaves a tapestry of their shared journey, every chapter a testament to the depth of their connection. Each word whispers of stolen glances, whispered promises, and moments that linger in the heart long after they've passed.</p>
-        <div class="embed-responsive embed-responsive-16by9">
+<p>Within the pages of <strong>"Love at Last Sight,"</strong> Jesse unfolds the chapters of their love journey with a romantic tone. Like a skilled weaver, he carefully stitches together moments of their shared past, creating a narrative of love that spans the pages of their story. <p></p>Each chapter serves as a living proof to the depth of their connection, a testament to the enduring bond that binds their hearts together.
+
+</p>        <div class="embed-responsive embed-responsive-16by9">
             <iframe src="https://drive.google.com/file/d/1LksOiMVEM1PtCz00931-DyR8vmFDSEjM/preview" width="640" height="480"></iframe>
         </div>
         <div class="mt-3">
-            <a href="love.pdf" class="btn btn-primary" download>Download the book</a>
+            <a href="LOVE AT LAST SIGHT.pdf" class="btn btn-primary" download>Download the book</a>
         </div>
     </div>
     <br><br>
@@ -174,7 +302,7 @@
     <!-- End of Footer -->
     <script>
         // Retrieve and display visit count from localStorage or set to 0
-        let visitCount = parseInt(localStorage.getItem('visitCount')) || 372;
+        let visitCount = parseInt(localStorage.getItem('visitCount')) || 26;
         document.getElementById('visitCount').textContent = visitCount;
     
         // Increment visit count on each page load
