@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Occasions</title>
+    <!-- Bootstrap CSS link -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .event {
+            margin-bottom: 30px;
+            position: relative;
+            cursor: pointer; /* Change cursor to hand */
+        }
+
+        .event img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .event:hover img {
+            transform: scale(1.1);
+        }
+
+        .modal-content iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Events and Occasions</h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="event" data-toggle="modal" data-target="#tourDayModal">
+
+                    <img src="tour day.jpg" alt="Tour Day Thumbnail" class="img-fluid">
+                    <center>  <p>Tour Day</p>
+                </div>
+            </div>
+                    <div class="row">
+            <div class="col-md-4">
+                <div class="event" data-toggle="modal" data-target="#speechDayModal">
+
+                    <img src="jumbotrone.jpg" alt="Speech Day and Graduation" class="img-fluid">
+                    <center>  <p>Speech Day & Graduation</p>
+                </div>
+            </div>     
+            <div class="col-md-4">
+                <div class="event">
+                    <a href="celebration.html">
+                        <img src="congs.jpg" alt="Graduation Party Thumbnail" class="img-fluid"> </a>
+                        <center>
+                            <p>Speech Day and Graduation Programme</p>
+                        </center>
+                   
+                </div>
+            </div> 
+            
+            <div class="col-md-4">
+                <div class="event" data-toggle="modal" data-target="#leaversPartyModal">
+            
+                    <img src="marching.png" alt="Leaver's Party Thumbnail" class="img-fluid">
+                    <center> <p>School Band Marching</p>
+                </div>
+            </div> 
+            <!-- Add more columns for additional events -->
+
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="tourDayModal" tabindex="-1" role="dialog" aria-labelledby="tourDayModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tourDayModalLabel">Tour Day</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RNdzpv8DOMQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="leaversPartyModal" tabindex="-1" role="dialog" aria-labelledby="leaversPartyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="leaversPartyModalLabel">School Band Marching</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3mda9Hi0_6E" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="speechDayModal" tabindex="-1" role="dialog" aria-labelledby="speechDayModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="speechDayModalLabel">Speech Day & Graduation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8Ek9_byrKnY" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="graduationPartyModal" tabindex="-1" role="dialog" aria-labelledby="graduationPartyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="graduationPartyModalLabel">Speech Day and Graduation Party</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+<br>
+ <!-- Footer -->
+ <footer class="footer" style="background-color: #ffffff; height: 100px; display: flex; justify-content: center; align-items: center;">
+    <div class="container">
+      <p style="text-align: center;"><br>
+        Made with <span style="color: red;">❦</span> by Mutumba Jesse Paul<br>
+        &copy; Fresh Teacher's Software <span id="currentYear"></span><br>
+        <a href="tel:+256750687790">0750687790</a> / <a href="tel:+256786812837">0786812837</a> <br>     
+      </p>
+    </div>
+  </footer>
+  <!-- End of Footer -->
+</html>
