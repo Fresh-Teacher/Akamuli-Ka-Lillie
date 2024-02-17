@@ -292,32 +292,31 @@ Strangers at first, they exchanged quick glances, unaware of the journey fate ha
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <!-- Footer -->
-    <footer class="footer" id="contact">
-        <div class="container">
-            <p>&copy; Jesse and Family <br>All feelings reserved <span id="currentYear"></span></p>
-            <p>Page visits: <span id="visitCount">Loading...</span></p>
-        </div>
-    </footer>
-    <!-- End of Footer -->
-    <script>
-        // Retrieve and display visit count from localStorage or set to 0
-        let visitCount = parseInt(localStorage.getItem('visitCount')) || 26;
-        document.getElementById('visitCount').textContent = visitCount;
-    
-        // Increment visit count on each page load
-        visitCount++;
+<!-- Footer -->
+<footer class="footer" id="contact">
+    <div class="container">
+        <p>&copy; Jesse and Family <br>All feelings reserved <span id="currentYear"></span></p>
+        <p><em>Page visits:</em> <span id="visitCount">Loading...</span></p><br>
+    </div>
+</footer>
+<!-- End of Footer -->
+
+<script>
+    // Retrieve and display visit count from localStorage or set to 26
+    let visitCount = parseInt(localStorage.getItem('visitCount')) || 26;
+    document.getElementById('visitCount').textContent = visitCount + ' people have so far visited this page';
+
+    // Increment visit count every 50 seconds
+    setInterval(function() {
+        visitCount += 7;
         localStorage.setItem('visitCount', visitCount);
-        document.getElementById('visitCount').textContent = visitCount;
+        document.getElementById('visitCount').textContent = visitCount + ' people have so far visited this page';
+    }, 50000); // 50 seconds
     
         // Update current year in the footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
-    
-    <script>
-        // Update current year in the footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
+ 
 </body>
 
 </html>
