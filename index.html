@@ -210,9 +210,18 @@
 
     <div class="container mt-5" id="biography">
         <h1>Biography</h1>
+    <p>Jesse and Lillian, their hearts drawn together like magnets, crossed paths <span id="yearsPassed"></span> years ago.</p>
+</div>
 
-<p>Jesse and Lillian, their hearts drawn together like magnets, crossed paths four years ago. In that encounter, their souls connected, setting the stage for a love story that would stand the test of time.
+<script>
+    // Calculate years passed since 2020
+    const meetingYear = 2020;
+    const currentYear = new Date().getFullYear();
+    const yearsPassed = currentYear - meetingYear;
 
+    // Write years passed into the HTML
+    document.getElementById('yearsPassed').textContent = yearsPassed;
+</script>
 Strangers at first, they exchanged quick glances, unaware of the journey fate had in store for them. 
 
 </p><br><p>But it was not until they became best friends that Jesse and Lillian truly realised the depth of their connection. They confided in each other, supported each other, and cherished each other's company in ways they never thought possible. 
