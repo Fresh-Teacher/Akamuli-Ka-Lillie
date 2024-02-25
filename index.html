@@ -217,6 +217,23 @@
 
         }
 
+        /* CSS for pulsating animation */
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .btn-pulse {
+        animation: pulse 1.5s infinite;
+    }
+
     </style>
 
 </head>
@@ -390,7 +407,12 @@
 
 
     <div class="container mt-5" id="biography">
-
+        
+        <center><div class="container mt-5">
+            <a href="app.apk" class="btn btn-primary btn-pulse">Install Our App</a>
+        </div></center>
+        
+        <br>
         <h1>Biography ✍🏻</h1>
 
     <p>Jesse and Lillian, their hearts drawn together like magnets, crossed paths <span id="yearsPassed"></span> years ago. 
