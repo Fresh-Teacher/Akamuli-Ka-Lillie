@@ -5,6 +5,7 @@
 
 
 <head>
+    <link rel="stylesheet" type="text/css" href="davidobo.css">
 
     <meta charset="UTF-8">
 
@@ -14,6 +15,7 @@
 
     <!-- Bootstrap CSS link -->
 <!-- Vendor JS Files -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
      <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
      <script src="assets/vendor/aos/aos.js"></script>
      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -233,6 +235,12 @@
     .btn-pulse {
         animation: pulse 1.5s infinite;
     }
+    .disabled-comments {
+        margin-top: 20px; /* Adjust the top margin as needed */
+        text-align: center; /* Center the text */
+        color: #888; /* Set the text color */
+        font-style: italic; /* Italicize the text */
+    }
 
     </style>
 
@@ -407,9 +415,9 @@
 
 
     <div class="container mt-5" id="biography">
-        
+        <br>
         <center><div class="container mt-5">
-            <a href="Love App.apk" class="btn btn-primary btn-pulse">Install Our App</a>
+            <a href="app.apk" class="btn btn-primary btn-pulse">Install Our App</a>
         </div></center>
         
         <br>
@@ -689,7 +697,66 @@ Strangers at first, they exchanged quick glances, unaware of the journey fate ha
             </div>
     
         </div>
-    
+        <div class="comments">
+            <div class="counter">
+                <div class="reactions">
+                    <img class="like" src="avatar1.jpg" /> <img class="love" src="avatar10.jpg" /> <img class="care" src="avatar19.jpg" /> <span id="likes">153 people</span>
+                </div>
+                <span id="comments"><i class="far fa-comment"></i> 23 Comments </span> 
+            </div>
+            <div class="bar">
+                <span class="react"><i class="fas fa-thumbs-up"></i> <a class="liked">153 Likes</a></span> <span class="react"><i class="fas fa-flag"></i> Report</span> <span class="react" id="share-button"><i class="fa fa-share"></i> Share</span>
+
+            </div>
+            <div>
+                <div class="comment">
+                </div>
+            </div>
+            <div class="comment">
+                <img src="kalalu ivan.jpg" />
+                <div class="single-container">
+                    <span class="user"> Joseph Emmanuel </span>
+                    <span class="text"> 
+                        Love at Last Sight brought tears to my eyes! Such a beautiful story. 🥺
+                        </span>
+                </div>
+                <div class="buttons">  <span class="action liked">Like</span> · <span class="action">Reply</span></div>
+            </div>
+            <div class="comment">
+                <img src="https://1.bp.blogspot.com/--d2BBdGugW8/XpdlXRvB-HI/AAAAAAAAAJ8/xcstaPQkWoszaizR_rkK2Nc5L7xN2o7WACLcBGAsYHQ/s1600/FB_IMG_15869726679037399.jpg" />
+                <div class="single-container"><span class="user">David Anthony</span> <span class="text"> I can't get enough of this author's books. He is a literary genius! His books have the power to transport you to another world. I can't recommend him enough. Follow him for more captivating reads!</span></div>
+                <div class="buttons"> <span class="action liked">Like</span> · <span class="action">Reply</span></div>
+            </div>
+            <div class="comment reply">
+                <img src="https://1.bp.blogspot.com/-UQW1DxDR9Ko/XpdlghF8wJI/AAAAAAAAAKU/EXuIMhMGNeED6BwLWbxkGgtBe3HL0RTTACLcBGAsYHQ/s1600/FB_IMG_15869730921979436.jpg" />
+                <div class="single-container"><span class="user">Amahle John </span> <span class="text"> Absolutely agree! I've recommended this author to all of my friends, and they've become fans too! I've read all of his books, and I'm always left wanting more. His writing style is captivating, and his stories are unforgettable. Follow him for more!</span></div>
+                <div class="buttons">  <span class="action liked">Like</span> · <span class="action">Reply</span></div>
+            </div>
+<!-- Bonolo's last comment -->
+    <div class="comment">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhETuUnZKp3TrK9zDTqBtlN4ahx1RrCH6RqG14wW5J8CIBv6HYs7gQSvAiZBwn8NT3lXcz3h8jR87s1z_qZ2kzEoZ7HRnWzskSuqK5NOfKyiQByU3BgypGHXP-m9LlPyFh2FhIsUdN6cO1DnZb-GTtRMDQk8L75NDDUnEC4JxQ6OwsnAjbKVhhlNxrLyQ/s320/9F5D4C76-9CCB-45EB-BA73-73A125849593.jpeg">
+        <div class="single-container">
+            <span class="user">Bonolo</span>
+            <span class="text">Akamuli ka Lillie is on repeat! Can't get enough of it 🎧</span>
+        </div>
+        <div class="buttons">
+            <span class="action liked">Like</span>            <span class="dot">·</span>
+
+            <span class="action">Reply</span>
+        </div>
+    </div><br>
+           <center> <div class="view-more-comments">
+                <a href="#" id="view-more-link"><i>View 20 more comments</i></a>
+            </div></center><br>
+            
+            
+    </div>
+    </div>
+    <div class="input"><input placeholder="Write a comment..." />
+        <div class="disabled-comments">
+            <p>Comments have been disabled!</p>
+        </div>
+    </div>
         <br><br>
 
 
@@ -722,6 +789,49 @@ Strangers at first, they exchanged quick glances, unaware of the journey fate ha
 
 
 <script>
+// Get the share button element
+const shareButton = document.getElementById('share-button');
+
+// Add event listener to the share button
+shareButton.addEventListener('click', function() {
+    // Get the current page's URL
+    const currentPageUrl = window.location.href;
+
+    // Create the WhatsApp share URL
+    const whatsappShareUrl = `whatsapp://send?text=${encodeURIComponent(currentPageUrl)}`;
+
+    // Open the WhatsApp share URL in a new window
+    window.open(whatsappShareUrl);
+});
+
+    document.getElementById('view-more-link').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Fetch comments from comments.json
+        fetch('comments.json')
+            .then(response => response.json())
+            .then(data => {
+                // Append the new comments to the existing comments section
+                data.forEach(comment => {
+                    const commentElement = document.createElement('div');
+                    commentElement.classList.add('comment');
+                    commentElement.innerHTML = `
+                        <img src="${comment.avatar}" />
+                        <div class="single-container">
+                            <span class="user">${comment.username}</span>
+                            <span class="text">${comment.commentText}</span>
+                        </div>
+                        <div class="buttons">
+                            <span class="action liked">Like</span>
+                            · <span class="action">Reply</span>
+                        </div>
+                    `;
+                    document.querySelector('.comments').appendChild(commentElement);
+                });
+            })
+            .catch(error => console.error('Error fetching comments:', error));
+    });
+
 
     // Retrieve and display visit count from localStorage or set to 26
 
