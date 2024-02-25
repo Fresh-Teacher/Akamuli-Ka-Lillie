@@ -30,6 +30,1180 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        <!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+    <link rel="stylesheet" type="text/css" href="davidobo.css">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Akamuli ka Lillie 🌷</title>
+
+    <!-- Bootstrap CSS link -->
+<!-- Vendor JS Files -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+     <script src="assets/vendor/aos/aos.js"></script>
+     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+     <script src="assets/vendor/php-email-form/validate.js"></script>
+     <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+@import url("//fonts.googleapis.com/earlyaccess/droidarabicnaskh.css");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, Droid Arabic Naskh;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+body {
+    direction: lfl;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.post {
+    background: #fff;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 500px;
+    border: 1px solid #d0d1d5;
+    border-radius: 3px;
+}
+
+.post img {
+    width: 100%;
+}
+
+.welcome {
+    font-size: 15px;
+}
+
+.amount,
+#getname {
+    color: #098105;
+    text-decoration: none;
+}
+
+.done {
+    text-align: center;
+    color: #27ae60;
+}
+
+.tip {
+    font-size: 14px;
+}
+
+.title {
+    text-align: center;
+}
+
+.error {
+    display: none;
+    text-align: center;
+    font-size: 14px;
+    color: #e74c3c;
+}
+
+button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin: 10px auto;
+    background: rgb(254, 202, 5);
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #098105;
+}
+
+.phone {
+    max-width: 400px;
+    margin: 10px auto;
+}
+
+.phone input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #cecece;
+    font-size: 14px;
+}
+
+#confirm {
+    width: 200px;
+    margin: 10px auto;
+    border-radius: 0px;
+}
+
+#loader {
+    text-align: center;
+}
+
+.spin {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: solid 8px rgb(254, 202, 5);
+    border-right-color: transparent;
+    border-radius: 50%;
+    margin: 10px auto;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+#loader,
+#info,
+#checking,
+#share,
+#claim {
+    display: none;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barr {
+    direction: ltr;
+    max-width: 400px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+.fill {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 100px);
+    height: 35px;
+    padding: 2px;
+    border: 2px solid #098105;
+}
+
+#fill,
+#fill2 {
+    background: #098105;
+    width: 0%;
+    height: 100%;
+}
+
+.percentage {
+    width: 100px;
+    float: right;
+    height: 35px;
+    font-size: 16px;
+    border: 2px solid #098105;
+}
+
+#percentage,
+#percentage2 {
+    margin-left: 5px;
+}
+
+#check,
+#check2 {
+    display: none;
+}
+
+.counter {
+    color: #7f7f7f;
+    font-size: 12px;
+    text-align: right;
+    padding: 10px 0 10px 2px;
+    border-bottom: 1px solid #e1e2e3;
+}
+
+.reactions {
+    display: inline-flex;
+    align-items: center;
+    float: left;
+}
+
+.counter img {
+    float: left;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-sizing: content-box;
+}
+
+.like,
+.love {
+    margin-right: -5px;
+}
+
+.like {
+    z-index: 2;
+}
+
+.love {
+    z-index: 1;
+}
+
+.bar {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #e1e2e3;
+}
+
+.bar .react {
+    display: table-cell;
+    width: calc(100% / 3);
+    font-size: 12px;
+    color: #7f7f7f;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.comments {
+    direction: ltr;
+}
+
+.comment {
+    padding: 6px 0;
+    margin-top: 5px;
+}
+
+.comment img {
+    float: left;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.reply {
+    margin-left: 37px;
+}
+
+.single-container {
+    margin-left: 37px;
+    background: #f1f2f6;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.single-container .user {
+    display: inline-block;
+    cursor: pointer;
+    color: #365899;
+    margin-bottom: 5px;
+}
+
+.single-container .text {
+    display: block;
+}
+
+.buttons {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px 0 0 47px;
+    color: #90949c;
+}
+
+.action {
+    cursor: pointer;
+}
+
+.action:hover {
+    text-decoration: underline;
+}
+
+.input {
+    padding: 6px 12px 12px;
+}
+
+.input input {
+    width: 100%;
+    background: #f1f2f6;
+    padding: 10px;
+    border-radius: 15px;
+    border: 0;
+    outline: none;
+}
+
+.A {
+    text-align: center;
+    background-color: rgb(254, 202, 5);
+}
+     /*--------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------*/
+.gallery .gallery-item {
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+
+.gallery .gallery-item img {
+  transition: all ease-in-out 0.4s;
+}
+
+.gallery .gallery-item:hover img {
+  transform: scale(1.1);
+}
+        body {
+
+            padding-top: 70px; /* Offset for fixed navbar */
+
+            background-color: #f4c2c2;
+            
+
+        }
+
+
+
+        h1 {
+
+            text-align: center;
+
+            margin-bottom: 30px;
+
+            font-size: 36px; /* Decreased font size */
+
+        }
+
+
+
+        .event {
+
+            margin-bottom: 30px;
+
+            position: relative;
+
+            cursor: pointer; /* Change cursor to hand */
+
+        }
+
+
+
+        .event img {
+
+            max-width: 100%;
+
+            height: auto;
+
+            transition: transform 0.3s;
+
+        }
+
+
+
+        .event:hover img {
+
+            transform: scale(1.1);
+
+        }
+
+
+
+        .modal-content iframe {
+
+            width: 100%;
+
+            height: 100%;
+
+        }
+
+
+
+        
+        /* Navbar styling */
+        .navbar {
+            background-color: #ff0000; /* Dark grey */
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: #ffffff; /* White */
+        }
+
+        .navbar-brand:hover,
+        .navbar-nav .nav-link:hover {
+            color: #ffffff; /* White */
+        }
+
+        /* Footer styling */
+        .footer {
+            background-color: #ff0000; /* Dark grey */
+            color: #ffc0cb; /* White */
+            text-align: center;
+            padding: 20px 0;
+        }
+
+
+
+        #snowflakeContainer {
+
+                position: absolute;
+
+                left: 0;
+
+                top: 0;
+
+                pointer-events: none
+
+            }
+
+
+
+            .snowflake {
+
+                position: fixed;
+
+                user-select: none;
+
+                z-index: 1000;
+
+                color: #ffffff;
+
+                opacity: .8;
+
+                pointer-events: none
+
+            }
+
+
+
+            @keyframes fall {
+
+                0% {
+
+                    top: -10%
+
+                }
+
+                100% {
+
+                    top: 100%
+
+                }
+
+            }
+
+            .m1 {
+
+            position: fixed;
+
+            left: 1%;
+
+            width: auto;
+
+            height: 100%;
+
+            top: 1%;
+
+            color: #000;
+
+        }
+
+
+
+        .m2 {
+
+            position: fixed;
+
+            right: 1%;
+
+            width: auto;
+
+            height: 100%;
+
+            top: 1%;
+
+            color: #000;
+
+        }
+
+        /* CSS for pulsating animation */
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .btn-pulse {
+        animation: pulse 1.5s infinite;
+    }
+    .disabled-comments {
+        margin-top: 20px; /* Adjust the top margin as needed */
+        text-align: center; /* Center the text */
+        color: #888; /* Set the text color */
+        font-style: italic; /* Italicize the text */
+    }
+
+    </style>
+
+</head>
+
+
+
+<div id="snowflakeContainer"></div>
+
+<script>
+
+    const snowflakeContainer = document.getElementById("snowflakeContainer");
+
+    let snowflakes = [];
+
+    const numberOfSnowflakes = 20,
+
+        characters = ["❤️", "💕"];
+
+
+
+    function createSnowflake() {
+
+        let e = document.createElement("div");
+
+        e.className = "snowflake", e.textContent = characters[Math.floor(Math.random() * characters.length)], e.style.fontSize = `${12+20*Math.random()}px`, e.style.left = `${100*Math.random()}%`, e.style.animationDuration = `${5+5*Math.random()}s`, e.style.animationName = "fall", e.style.animationIterationCount = "infinite", snowflakeContainer.appendChild(e)
+
+    }
+
+
+
+    function updateSnowflakes() {
+
+        snowflakes.forEach(e => {
+
+            parseInt(e.style.top, 10) > window.innerHeight && (e.style.top = "-25px")
+
+        }), requestAnimationFrame(updateSnowflakes)
+
+    }
+
+    for (let i = 0; i < 30; i++) createSnowflake(), snowflakes.push(snowflakeContainer.lastChild);
+
+    updateSnowflakes();
+
+</script>
+
+<body>
+
+
+
+   <marquee class="m1" behavior="scroll" direction="up" scrolldelay="0"> <br>
+
+    💐<br><br> <!-- Bouquet -->
+
+    🌹<br><br> <!-- Rose -->
+
+    🌻<br><br> <!-- Sunflower -->
+
+    🌷<br><br> <!-- Tulip -->
+
+    🌼<br><br> <!-- Blossom -->
+
+    💮<br><br> <!-- White Flower -->
+
+    🏵️<br><br> <!-- Rosette -->
+
+    💐<br><br> <!-- Bouquet -->
+
+    🌹<br><br> <!-- Rose -->
+
+    🌻<br><br> <!-- Sunflower -->
+
+    🌷<br><br> <!-- Tulip -->
+
+    🌼<br><br> <!-- Blossom -->
+
+    💮<br><br> <!-- White Flower -->
+
+    🏵️<br><br> <!-- Rosette -->
+
+</marquee>
+
+<marquee class="m2" behavior="scroll" direction="down" scrolldelay="0"> <br>
+
+    💐<br><br> <!-- Bouquet -->
+
+    🌹<br><br> <!-- Rose -->
+
+    🌻<br><br> <!-- Sunflower -->
+
+    🌷<br><br> <!-- Tulip -->
+
+    🌼<br><br> <!-- Blossom -->
+
+    💮<br><br> <!-- White Flower -->
+
+    🏵️<br><br> <!-- Rosette -->
+
+    💐<br><br> <!-- Bouquet -->
+
+    🌹<br><br> <!-- Rose -->
+
+    🌻<br><br> <!-- Sunflower -->
+
+    🌷<br><br> <!-- Tulip -->
+
+    🌼<br><br> <!-- Blossom -->
+
+    💮<br><br> <!-- White Flower -->
+
+    🏵️<br><br> <!-- Rosette -->
+
+</marquee>
+
+    
+
+
+
+    <!-- Navigation bar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#">Jesse <span style="color: white;">❦</span> Lillian </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item active">
+
+                        <a class="nav-link" href="#biography">Biography <span class="sr-only">(current)</span></a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#songs">Songs</a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#books">Books</a>
+
+                    </li>
+
+     <li class="nav-item">
+
+                        <a class="nav-link" href="#gallery">Gallery</a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <div class="container mt-5" id="biography">
+        <br>
+        <center><div class="container mt-5">
+            <a href="app.apk" class="btn btn-primary btn-pulse">Install Our App</a>
+        </div></center>
+        
+        <br>
+        <h1>Biography ✍🏻</h1>
+
+    <p>Jesse and Lillian, their hearts drawn together like magnets, crossed paths <span id="yearsPassed"></span> years ago. 
+Strangers at first, they exchanged quick glances, unaware of the journey fate had in store for them. Little did they know that they would craft a love story which would stand the test of time! ⏳️
+
+</p>
+
+
+
+<script>
+
+    // Calculate years passed since 2020
+
+    const meetingYear = 2020;
+
+    const currentYear = new Date().getFullYear();
+
+    const yearsPassed = currentYear - meetingYear;
+
+
+
+    // Write years passed into the HTML
+
+    document.getElementById('yearsPassed').textContent = yearsPassed;
+
+</script>
+
+
+<p>But it was not until they became best friends that Jesse and Lillian truly realised the depth of their connection. They confided in each other, supported each other, and cherished each other's company in ways they never thought possible. 🫂
+
+
+
+
+
+
+
+
+
+
+
+</p>   </div>
+
+
+
+    <div class="container mt-5" id="songs">
+
+        <h2>The Song 🎵</h2> 
+
+<p>In the quiet moments of solitude, Jesse poured his heart into the creation of his love song, channeling every tiny bit of his feelings and emotions into its melody. 🗣️<br><p></p>Each note carried the weight of his admiration, each verse a reflection of his adoration towards Lillian. Through music, Jesse sought to capture the essence of their connection, immortalising their love story in the timeless lyrics of <strong>"Akamuli ka Lillie."</strong>
+
+🎶
+
+</p>       <br>
+
+        <div class="audio-container">
+
+            <audio controls style="max-width: 100%;">
+
+                <source src="Akamuli ka Lillie.mp3" type="audio/mpeg">
+
+                Your browser does not support the audio element.
+
+            </audio>
+
+        </div>
+
+        <br>
+
+        <p>Click on player to listen</p>
+
+        <br>
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div class="event" data-toggle="modal" data-target="#tourDayModal">
+
+                    <img src="lillie.jpg" alt="Akamuli Ka Lillie" class="img-fluid"><br>   <center>
+
+                        <p>Click on video to Watch</p>
+
+                    </center>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+ 
+
+    <!-- Modals -->
+
+    <div class="modal fade" id="tourDayModal" tabindex="-1" role="dialog" aria-labelledby="tourDayModalLabel"
+
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title" id="tourDayModalLabel">Akamuli Ka Lillie</h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                        <span aria-hidden="true">&times;</span>
+
+                    </button>
+
+                </div>
+
+
+
+                <div class="modal-body">
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/NKcb40ztds0?si=3igZ9nFBBTbvaE0g"
+
+                        frameborder="0" allowfullscreen></iframe>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <a href="Akamuli ka Lillie.mp3" class="btn btn-primary">Download Song</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+         <!-- ======= Gallery Section ======= -->
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Gallery</h2>
+                    <p>Check Out Our Lovely Gallery</p>
+                </div>
+                <div class="row g-0" data-aos="fade-left">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                            <a href="Photo from Fresh Teacher (17).jpg" class="gallery-lightbox">
+                                <img src="https://fresh-teacher.github.io/large/Photo from Fresh Teacher (17).jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div> <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                            <a href="Fresh Teacher and Lillian.jpg" class="gallery-lightbox">
+                                <img src="https://fresh-teacher.github.io/large/Fresh Teacher and Lillian.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div> <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                            <a href="lillie.jpg" class="gallery-lightbox">
+                                <img src="https://fresh-teacher.github.io/large/lillie.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                            <a href="Fresh Teacher Uganda (13).jpg" class="gallery-lightbox">
+                                <img src="https://fresh-teacher.github.io/large/Fresh Teacher Uganda (13).jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                            <a href="Fresh Teacher Uganda (14).jpg" class="gallery-lightbox">
+                                <img src="https://fresh-teacher.github.io/large/Fresh Teacher Uganda (14).jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                            <a href="Fresh Teacher Uganda (16).jpg" class="gallery-lightbox">
+                                <img src="https://fresh-teacher.github.io/large/Fresh Teacher Uganda (16).jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                            <a href="Fresh Teacher Uganda (19).jpg" class="gallery-lightbox">
+                                <img src="https://fresh-teacher.github.io/large/Fresh Teacher Uganda (19).jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                            <a href="Fresh Teacher Uganda (20).jpg" class="gallery-lightbox">
+                                <img src="https://fresh-teacher.github.io/large/Fresh Teacher Uganda (20).jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                            <a href="Fresh Teacher Uganda (4).jpg" class="gallery-lightbox">
+                                <img src="https://fresh-teacher.github.io/large/Fresh Teacher Uganda (4).jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>         
+                               <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                            <a href="Fresh Family.jpg" class="gallery-lightbox">
+                                <img src="https://fresh-teacher.github.io/large/Fresh Family.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                            <a href="The Fresh Family.jpg" class="gallery-lightbox">
+                                <img src="https://fresh-teacher.github.io/large/The Fresh Family.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+
+
+        </section>
+        <!-- End Gallery Section -->
+
+        <div class="container mt-5" id="books">
+
+            <h2>LOVE AT LAST SIGHT 📘</h2> 
+    
+    <p>Within the pages of <strong>"Love at Last Sight,"</strong> Jesse unfolds the chapters of their love journey with a romantic tone. Like a skilled weaver, he carefully stitches together moments of their shared past, creating a narrative of love that spans the pages of their story. 📖<p></p>Each chapter serves as a living proof to the depth of their connection, a testament to the enduring bond that binds their hearts together. 💝
+    
+    
+    
+    </p>        <div class="embed-responsive embed-responsive-16by9">
+    
+                <iframe src="https://drive.google.com/file/d/1LksOiMVEM1PtCz00931-DyR8vmFDSEjM/preview" width="640" height="480"></iframe>
+    
+            </div>
+    
+            <div class="mt-3">
+    
+                <a href="LOVE AT LAST SIGHT BOOK.pdf" class="btn btn-primary" download>Download the book</a>
+    
+            </div>
+    
+        </div>
+    
+        <br><br> 
+        <div class="container mt-5" id="books">
+    
+            <h2>THE EYE 📕</h2> 
+    
+            <p>Step into the magical realm of <strong>"The Eye"</strong>, a captivating novel penned by the talented wordsmith, Kimuli Bob. Within its pages, you'll discover a love story that unfolds amidst a tapestry of mystery and romance. With masterful strokes of his pen, Bob blurs the boundaries between reality and fantasy, weaving a tale that tugs at the heartstrings and ignites the imagination. From the very first page, readers are drawn into a lyrical journey that brings to life the characters of Jesse and Lillian.</p>
+            
+    
+    </p>        <div class="embed-responsive embed-responsive-16by9">
+    
+<iframe src="https://drive.google.com/file/d/1UQ6qlsiyGT2OCFnpdB6vaHwjQLeGuOT6/preview" width="640" height="480"></iframe>
+    
+            </div>
+    
+            <div class="mt-3">
+    
+                <a href="The Eye.pdf" class="btn btn-primary" download>Download the book</a>
+    
+            </div>
+    
+        </div>
+        <div class="comments">
+            <div class="counter">
+                <div class="reactions">
+                    <img class="like" src="avatar1.jpg" /> <img class="love" src="avatar10.jpg" /> <img class="care" src="avatar19.jpg" /> <span id="likes">153 people</span>
+                </div>
+                <span id="comments"><i class="far fa-comment"></i> 23 Comments </span> 
+            </div>
+            <div class="bar">
+                <span class="react"><i class="fas fa-thumbs-up"></i> <a class="liked">153 Likes</a></span> <span class="react"><i class="fas fa-flag"></i> Report</span> <span class="react" id="share-button"><i class="fa fa-share"></i> Share</span>
+
+            </div>
+            <div>
+                <div class="comment">
+                </div>
+            </div>
+            <div class="comment">
+                <img src="kalalu ivan.jpg" />
+                <div class="single-container">
+                    <span class="user"> Joseph Emmanuel </span>
+                    <span class="text"> 
+                        Love at Last Sight brought tears to my eyes! Such a beautiful story. 🥺
+                        </span>
+                </div>
+                <div class="buttons">  <span class="action liked">Like</span> · <span class="action">Reply</span></div>
+            </div>
+            <div class="comment">
+                <img src="https://1.bp.blogspot.com/--d2BBdGugW8/XpdlXRvB-HI/AAAAAAAAAJ8/xcstaPQkWoszaizR_rkK2Nc5L7xN2o7WACLcBGAsYHQ/s1600/FB_IMG_15869726679037399.jpg" />
+                <div class="single-container"><span class="user">David Anthony</span> <span class="text"> I can't get enough of this author's books. He is a literary genius! His books have the power to transport you to another world. I can't recommend him enough. Follow him for more captivating reads!</span></div>
+                <div class="buttons"> <span class="action liked">Like</span> · <span class="action">Reply</span></div>
+            </div>
+            <div class="comment reply">
+                <img src="https://1.bp.blogspot.com/-UQW1DxDR9Ko/XpdlghF8wJI/AAAAAAAAAKU/EXuIMhMGNeED6BwLWbxkGgtBe3HL0RTTACLcBGAsYHQ/s1600/FB_IMG_15869730921979436.jpg" />
+                <div class="single-container"><span class="user">Amahle John </span> <span class="text"> Absolutely agree! I've recommended this author to all of my friends, and they've become fans too! I've read all of his books, and I'm always left wanting more. His writing style is captivating, and his stories are unforgettable. Follow him for more!</span></div>
+                <div class="buttons">  <span class="action liked">Like</span> · <span class="action">Reply</span></div>
+            </div>
+<!-- Bonolo's last comment -->
+    <div class="comment">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhETuUnZKp3TrK9zDTqBtlN4ahx1RrCH6RqG14wW5J8CIBv6HYs7gQSvAiZBwn8NT3lXcz3h8jR87s1z_qZ2kzEoZ7HRnWzskSuqK5NOfKyiQByU3BgypGHXP-m9LlPyFh2FhIsUdN6cO1DnZb-GTtRMDQk8L75NDDUnEC4JxQ6OwsnAjbKVhhlNxrLyQ/s320/9F5D4C76-9CCB-45EB-BA73-73A125849593.jpeg">
+        <div class="single-container">
+            <span class="user">Bonolo</span>
+            <span class="text">Akamuli ka Lillie is on repeat! Can't get enough of it 🎧</span>
+        </div>
+        <div class="buttons">
+            <span class="action liked">Like</span>            <span class="dot">·</span>
+
+            <span class="action">Reply</span>
+        </div>
+    </div><br>
+           <center> <div class="view-more-comments">
+                <a href="#" id="view-more-link"><i>View 20 more comments</i></a>
+            </div></center><br>
+            
+            
+    </div>
+    </div>
+    <div class="input"><input placeholder="Write a comment..." />
+        <div class="disabled-comments">
+            <p>Comments have been disabled!</p>
+        </div>
+    </div>
+        <br><br>
+
+
+    <!-- Bootstrap JS and Popper.js scripts -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+<!-- Footer -->
+
+<footer class="footer" id="contact">
+
+    <div class="container">
+
+        <p>&copy; Jesse and Family <br>All feelings reserved <span id="currentYear"></span></p>
+
+        <p><em>Page visits:</em> <span id="visitCount">Loading...</span></p><br>
+
+    </div>
+
+</footer>
+
+<!-- End of Footer -->
+
+
+
+<script>
+// Get the share button element
+const shareButton = document.getElementById('share-button');
+
+// Add event listener to the share button
+shareButton.addEventListener('click', function() {
+    // Get the current page's URL
+    const currentPageUrl = window.location.href;
+
+    // Create the WhatsApp share URL
+    const whatsappShareUrl = `whatsapp://send?text=${encodeURIComponent(currentPageUrl)}`;
+
+    // Open the WhatsApp share URL in a new window
+    window.open(whatsappShareUrl);
+});
+
+    document.getElementById('view-more-link').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Fetch comments from comments.json
+        fetch('comments.json')
+            .then(response => response.json())
+            .then(data => {
+                // Append the new comments to the existing comments section
+                data.forEach(comment => {
+                    const commentElement = document.createElement('div');
+                    commentElement.classList.add('comment');
+                    commentElement.innerHTML = `
+                        <img src="${comment.avatar}" />
+                        <div class="single-container">
+                            <span class="user">${comment.username}</span>
+                            <span class="text">${comment.commentText}</span>
+                        </div>
+                        <div class="buttons">
+                            <span class="action liked">Like</span>
+                            · <span class="action">Reply</span>
+                        </div>
+                    `;
+                    document.querySelector('.comments').appendChild(commentElement);
+                });
+            })
+            .catch(error => console.error('Error fetching comments:', error));
+    });
+
+
+    // Retrieve and display visit count from localStorage or set to 26
+
+    let visitCount = parseInt(localStorage.getItem('visitCount')) || 26;
+
+    document.getElementById('visitCount').textContent = visitCount + ' people have so far visited this page';
+
+
+
+    // Increment visit count every 50 seconds
+
+    setInterval(function() {
+
+        visitCount += 7;
+
+        localStorage.setItem('visitCount', visitCount);
+
+        document.getElementById('visitCount').textContent = visitCount + ' people have so far visited this page';
+
+    }, 50000); // 50 seconds
+
+    
+
+        // Update current year in the footer
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    </script>
+
+ 
+
+</body>
+
+
+
+</html>
+
      /*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
