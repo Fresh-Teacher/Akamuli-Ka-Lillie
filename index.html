@@ -1003,15 +1003,17 @@ Strangers at first, they exchanged quick glances, unaware of the journey fate ha
         <div class="comments">
             <div class="counter">
                 <div class="reactions">
-                    <img class="like" src="avatar1.jpg" /> <img class="love" src="avatar10.jpg" /> <img class="care"
-                        src="avatar19.jpg" /> <span id="likes">153 people</span>
+                    <img class="like" src="https://akamuli-ka-lillie.vercel.app/avatar1.jpg" /> <img class="love" src="https://akamuli-ka-lillie.vercel.app/avatar10.jpg" /> <img class="care"
+                        src="https://akamuli-ka-lillie.vercel.app/avatar19.jpg" /> <span id="likes">24.7k Views</span>
                 </div>
                 <span id="comments"><i class="far fa-comment"></i> 23 Comments </span>
             </div>
             <div class="bar">
-                <span class="react"><i class="fas fa-thumbs-up"></i> <a class="liked">153 Likes</a></span> <span
-                    class="react"><i class="fas fa-flag"></i> Report</span> <span class="react" id="share-button"><i
-                        class="fa fa-share"></i> Share</span>
+                <span class="react"><i class="fas fa-thumbs-up"></i> <a class="liked">384 Likes</a></span> <span
+                    class="react"><i class="fas fa-flag"></i> Report</span> 
+                   <!-- Add the "Share" button with an ID -->
+<span class="react" id="share-button"><i class="fa fa-share"></i> Share</span>
+
     
             </div>
             <div>
@@ -1019,7 +1021,7 @@ Strangers at first, they exchanged quick glances, unaware of the journey fate ha
                 </div>
             </div>
             <div class="comment">
-                <img src="kalalu ivan.jpg" />
+                <img src="https://akamuli-ka-lillie.vercel.app/kalalu ivan.jpg" />
                 <div class="single-container">
                     <span class="user"> Joseph Emmanuel </span>
                     <span class="text">
@@ -1050,7 +1052,7 @@ Strangers at first, they exchanged quick glances, unaware of the journey fate ha
                 <img
                     src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhETuUnZKp3TrK9zDTqBtlN4ahx1RrCH6RqG14wW5J8CIBv6HYs7gQSvAiZBwn8NT3lXcz3h8jR87s1z_qZ2kzEoZ7HRnWzskSuqK5NOfKyiQByU3BgypGHXP-m9LlPyFh2FhIsUdN6cO1DnZb-GTtRMDQk8L75NDDUnEC4JxQ6OwsnAjbKVhhlNxrLyQ/s320/9F5D4C76-9CCB-45EB-BA73-73A125849593.jpeg">
                 <div class="single-container">
-                    <span class="user">Bonolo</span>
+                    <span class="user">Bonolo Grace</span>
                     <span class="text">Akamuli ka Lillie is on repeat! Can't get enough of it 🎧</span>
                 </div>
                 <div class="buttons">
@@ -1365,24 +1367,21 @@ Strangers at first, they exchanged quick glances, unaware of the journey fate ha
     
         <script>
            
-            // Get the share button element
-            const shareButton = document.getElementById('share-button');
-    
-            // Add event listener to the share button
-            shareButton.addEventListener('click', function () {
-                // Get the current page's URL
-                const currentPageUrl = window.location.href;
-    
-                // Create the WhatsApp share URL
-                const whatsappShareUrl = `whatsapp://send?text=${encodeURIComponent(currentPageUrl)}`;
-    
-                // Open the WhatsApp share URL in a new window
-                window.open(whatsappShareUrl);
-            });
-    
-            document.getElementById('view-more-link').addEventListener('click', function (event) {
-                event.preventDefault(); // Prevent default link behavior
-    
+      // Get the share button element
+const shareButton = document.getElementById('share-button');
+
+// Add event listener to the share button
+shareButton.addEventListener('click', function () {
+    // Specify the URL to be shared
+    const shareUrl = 'https://akamuli-ka-lillie.vercel.app';
+
+    // Create the WhatsApp share URL with the specified link
+    const whatsappShareUrl = `whatsapp://send?text=${encodeURIComponent(shareUrl)}`;
+
+    // Open the WhatsApp share URL in a new window
+    window.open(whatsappShareUrl);
+});
+
                
             // Retrieve and display visit count from localStorage or set to 26
     
