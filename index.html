@@ -1,1432 +1,460 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-
-
 <head>
-    <link rel="stylesheet" type="text/css" href="davidobo.css">
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Love Bible</title>
+    <!-- Bootstrap Modal CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Akamuli ka Lillie 🌷</title>
-
-    <!-- Bootstrap CSS link -->
-<!-- Vendor JS Files -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-     <script src="assets/vendor/aos/aos.js"></script>
-     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-     <script src="assets/vendor/php-email-form/validate.js"></script>
-     <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-        <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/topcoat-mobile-light.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
-@import url("//fonts.googleapis.com/earlyaccess/droidarabicnaskh.css");
-* {
-    margin: 0;
-    padding: 0;
-    font-family: Poppins, Droid Arabic Naskh;
-    font-weight: normal;
-    box-sizing: border-box;
-}
-
-body {
-    direction: lfl;
-    background: #ffffff;
-}
-
-a {
-    text-decoration: none;
-}
-
-.post {
-    background: #fff;
-    margin: 0 auto;
-    padding: 10px;
-    max-width: 500px;
-    border: 1px solid #d0d1d5;
-    border-radius: 3px;
-}
-
-.post img {
-    width: 100%;
-}
-
-.welcome {
-    font-size: 15px;
-}
-
-.amount,
-#getname {
-    color: #098105;
-    text-decoration: none;
-}
-
-.done {
-    text-align: center;
-    color: #27ae60;
-}
-
-.tip {
-    font-size: 14px;
-}
-
-.title {
-    text-align: center;
-}
-
-.error {
-    display: none;
-    text-align: center;
-    font-size: 14px;
-    color: #e74c3c;
-}
-
-button {
-    display: block;
-    width: 200px;
-    height: 50px;
-    color: #fff;
-    border: none;
-    outline: none;
-    font-size: 24px;
-    cursor: pointer;
-    border-radius: 5px;
-    padding: 0 10px;
-    margin: 10px auto;
-    background: rgb(254, 202, 5);
-    transition: background 0.3s ease;
-}
-
-button:hover {
-    background: #098105;
-}
-
-.phone {
-    max-width: 400px;
-    margin: 10px auto;
-}
-
-.phone input {
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    outline: none;
-    border: 2px solid #cecece;
-    font-size: 14px;
-}
-
-#confirm {
-    width: 200px;
-    margin: 10px auto;
-    border-radius: 0px;
-}
-
-#loader {
-    text-align: center;
-}
-
-.spin {
-    width: 50px;
-    height: 50px;
-    background: transparent;
-    border: solid 8px rgb(254, 202, 5);
-    border-right-color: transparent;
-    border-radius: 50%;
-    margin: 10px auto;
-    animation: spin 0.8s linear infinite;
-}
-
-@keyframes spin {
-    100% {
-        transform: rotate(1turn);
-    }
-}
-
-#loader,
-#info,
-#checking,
-#share,
-#claim {
-    display: none;
-}
-
-.center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.barr {
-    direction: ltr;
-    max-width: 400px;
-    margin: 10px auto;
-    box-sizing: border-box;
-}
-
-.fill {
-    position: relative;
-    display: inline-block;
-    width: calc(100% - 100px);
-    height: 35px;
-    padding: 2px;
-    border: 2px solid #098105;
-}
-
-#fill,
-#fill2 {
-    background: #098105;
-    width: 0%;
-    height: 100%;
-}
-
-.percentage {
-    width: 100px;
-    float: right;
-    height: 35px;
-    font-size: 16px;
-    border: 2px solid #098105;
-}
-
-#percentage,
-#percentage2 {
-    margin-left: 5px;
-}
-
-#check,
-#check2 {
-    display: none;
-}
-
-.counter {
-    color: #7f7f7f;
-    font-size: 12px;
-    text-align: right;
-    padding: 10px 0 10px 2px;
-    border-bottom: 1px solid #e1e2e3;
-}
-
-.reactions {
-    display: inline-flex;
-    align-items: center;
-    float: left;
-}
-
-.counter img {
-    float: left;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-sizing: content-box;
-}
-
-.like,
-.love {
-    margin-right: -5px;
-}
-
-.like {
-    z-index: 2;
-}
-
-.love {
-    z-index: 1;
-}
-
-.bar {
-    display: table;
-    width: 100%;
-    border-bottom: 1px solid #e1e2e3;
-}
-
-.bar .react {
-    display: table-cell;
-    width: calc(100% / 3);
-    font-size: 12px;
-    color: #7f7f7f;
-    text-align: center;
-    padding: 10px 0;
-    cursor: pointer;
-}
-
-.comments {
-    direction: ltr;
-}
-
-.comment {
-    padding: 6px 0;
-    margin-top: 5px;
-}
-
-.comment img {
-    float: left;
-    width: 32px;
-    height: 32px;
-    border: none;
-    border-radius: 18px;
-    cursor: pointer;
-}
-
-.reply {
-    margin-left: 37px;
-}
-
-.single-container {
-    margin-left: 37px;
-    background: #f1f2f6;
-    padding: 10px;
-    border-radius: 15px;
-    font-size: 12px;
-}
-
-.single-container .user {
-    display: inline-block;
-    cursor: pointer;
-    color: #365899;
-    margin-bottom: 5px;
-}
-
-.single-container .text {
-    display: block;
-}
-
-.buttons {
-    font-size: 12px;
-    font-weight: bold;
-    margin: 10px 0 0 47px;
-    color: #90949c;
-}
-
-.action {
-    cursor: pointer;
-}
-
-.action:hover {
-    text-decoration: underline;
-}
-
-.input {
-    padding: 6px 12px 12px;
-}
-
-.input input {
-    width: 100%;
-    background: #f1f2f6;
-    padding: 10px;
-    border-radius: 15px;
-    border: 0;
-    outline: none;
-}
-
-.A {
-    text-align: center;
-    background-color: rgb(254, 202, 5);
-}
-     /*--------------------------------------------------------------
-# Gallery
---------------------------------------------------------------*/
-.gallery .gallery-item {
-  overflow: hidden;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid #fff;
-}
-
-.gallery .gallery-item img {
-  transition: all ease-in-out 0.4s;
-}
-
-.gallery .gallery-item:hover img {
-  transform: scale(1.1);
-}
-        body {
-
-            padding-top: 70px; /* Offset for fixed navbar */
-
-            background-color: #f4c2c2;
-            
-
+        #novel-content {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-size: 12px; /* Adjust the font size as needed */
+            line-height: 1.0; /* Adjust the line height as needed */
         }
-
-
-
-        h1 {
-
-            text-align: center;
-
-            margin-bottom: 30px;
-
-            font-size: 36px; /* Decreased font size */
-
-        }
-
-
-
-        .event {
-
-            margin-bottom: 30px;
-
-            position: relative;
-
-            cursor: pointer; /* Change cursor to hand */
-
-        }
-
-
-
-        .event img {
-
-            max-width: 100%;
-
-            height: auto;
-
-            transition: transform 0.3s;
-
-        }
-
-
-
-        .event:hover img {
-
-            transform: scale(1.1);
-
-        }
-
-
-
-        .modal-content iframe {
-
-            width: 100%;
-
-            height: 100%;
-
-        }
-
-
-
-        
-        /* Navbar styling */
-        .navbar {
-            background-color: #ff0000; /* Dark grey */
-        }
-
-        .navbar-brand,
-        .navbar-nav .nav-link {
-            color: #ffffff; /* White */
-        }
-
-        .navbar-brand:hover,
-        .navbar-nav .nav-link:hover {
-            color: #ffffff; /* White */
-        }
-
-        /* Footer styling */
-        .footer {
-            background-color: #ff0000; /* Dark grey */
-            color: #ffc0cb; /* White */
-            text-align: center;
-            padding: 20px 0;
-        }
-
-
-
-        #snowflakeContainer {
-
-                position: absolute;
-
-                left: 0;
-
-                top: 0;
-
-                pointer-events: none
-
-            }
-
-
-
-            .snowflake {
-
-                position: fixed;
-
-                user-select: none;
-
-                z-index: 1000;
-
-                color: #ffffff;
-
-                opacity: .8;
-
-                pointer-events: none
-
-            }
-
-
-
-            @keyframes fall {
-
-                0% {
-
-                    top: -10%
-
-                }
-
-                100% {
-
-                    top: 100%
-
-                }
-
-            }
-
-            .m1 {
-
-            position: fixed;
-
-            left: 1%;
-
-            width: auto;
-
-            height: 100%;
-
-            top: 1%;
-
-            color: #000;
-
-        }
-
-
-
-        .m2 {
-
-            position: fixed;
-
-            right: 1%;
-
-            width: auto;
-
-            height: 100%;
-
-            top: 1%;
-
-            color: #000;
-
-        }
-
-        /* CSS for pulsating animation */
-    @keyframes pulse {
-        0% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scale(1.1);
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
-
-    .btn-pulse {
-        animation: pulse 1.5s infinite;
-    }
-    .disabled-comments {
-        margin-top: 20px; /* Adjust the top margin as needed */
-        text-align: center; /* Center the text */
-        color: #888; /* Set the text color */
-        font-style: italic; /* Italicize the text */
-    }
-
     </style>
-
 </head>
-
-
-
-<div id="snowflakeContainer"></div>
-
-<script>
-
-    const snowflakeContainer = document.getElementById("snowflakeContainer");
-
-    let snowflakes = [];
-
-    const numberOfSnowflakes = 20,
-
-        characters = ["❤️", "💕"];
-
-
-
-    function createSnowflake() {
-
-        let e = document.createElement("div");
-
-        e.className = "snowflake", e.textContent = characters[Math.floor(Math.random() * characters.length)], e.style.fontSize = `${12+20*Math.random()}px`, e.style.left = `${100*Math.random()}%`, e.style.animationDuration = `${5+5*Math.random()}s`, e.style.animationName = "fall", e.style.animationIterationCount = "infinite", snowflakeContainer.appendChild(e)
-
-    }
-
-
-
-    function updateSnowflakes() {
-
-        snowflakes.forEach(e => {
-
-            parseInt(e.style.top, 10) > window.innerHeight && (e.style.top = "-25px")
-
-        }), requestAnimationFrame(updateSnowflakes)
-
-    }
-
-    for (let i = 0; i < 30; i++) createSnowflake(), snowflakes.push(snowflakeContainer.lastChild);
-
-    updateSnowflakes();
-
-</script>
-
 <body>
-
-
-
-   <marquee class="m1" behavior="scroll" direction="up" scrolldelay="0"> <br>
-
-    💐<br><br> <!-- Bouquet -->
-
-    🌹<br><br> <!-- Rose -->
-
-    🌻<br><br> <!-- Sunflower -->
-
-    🌷<br><br> <!-- Tulip -->
-
-    🌼<br><br> <!-- Blossom -->
-
-    💮<br><br> <!-- White Flower -->
-
-    🏵️<br><br> <!-- Rosette -->
-
-    💐<br><br> <!-- Bouquet -->
-
-    🌹<br><br> <!-- Rose -->
-
-    🌻<br><br> <!-- Sunflower -->
-
-    🌷<br><br> <!-- Tulip -->
-
-    🌼<br><br> <!-- Blossom -->
-
-    💮<br><br> <!-- White Flower -->
-
-    🏵️<br><br> <!-- Rosette -->
-
-</marquee>
-
-<marquee class="m2" behavior="scroll" direction="down" scrolldelay="0"> <br>
-
-    💐<br><br> <!-- Bouquet -->
-
-    🌹<br><br> <!-- Rose -->
-
-    🌻<br><br> <!-- Sunflower -->
-
-    🌷<br><br> <!-- Tulip -->
-
-    🌼<br><br> <!-- Blossom -->
-
-    💮<br><br> <!-- White Flower -->
-
-    🏵️<br><br> <!-- Rosette -->
-
-    💐<br><br> <!-- Bouquet -->
-
-    🌹<br><br> <!-- Rose -->
-
-    🌻<br><br> <!-- Sunflower -->
-
-    🌷<br><br> <!-- Tulip -->
-
-    🌼<br><br> <!-- Blossom -->
-
-    💮<br><br> <!-- White Flower -->
-
-    🏵️<br><br> <!-- Rosette -->
-
-</marquee>
-
-    
-
-
-
-    <!-- Navigation bar -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-
-        <div class="container">
-
-            <a class="navbar-brand" href="#">Jesse <span style="color: white;">❦</span> Lillian </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-
-                <span class="navbar-toggler-icon"></span>
-
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-
-                <ul class="navbar-nav ml-auto">
-
-                    <li class="nav-item active">
-
-                        <a class="nav-link" href="#biography">Biography <span class="sr-only">(current)</span></a>
-
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="#songs">Songs</a>
-
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="#books">Books</a>
-
-                    </li>
-
-     <li class="nav-item">
-
-                        <a class="nav-link" href="#gallery">Gallery</a>
-
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-    </nav>
-
-
-
-    <div class="container mt-5" id="biography">
-        <br>
-        <center><div class="container mt-5">
-            <a href="app.apk" class="btn btn-primary btn-pulse">Install Our App</a>
-        </div></center>
+    <header style="position: fixed; width: 100%; top: 0; z-index: 100;">
+        <div class="topcoat-navigation-bar">
+            <div class="topcoat-navigation-bar__item center full">
+                <h2 class="topcoat-navigation-bar__title">THE <span style="color: rgb(255, 0, 0);">L❦VE</span> BIBLE</h2>
+            </div>         
+        </div>    
+    </header>
         
-        <br>
-        <h1>Biography ✍🏻</h1>
-
-    <p>Jesse and Lillian, their hearts drawn together like magnets, crossed paths <span id="yearsPassed"></span> years ago. 
-Strangers at first, they exchanged quick glances, unaware of the journey fate had in store for them. Little did they know that they would craft a love story which would stand the test of time! ⏳️
-
-</p>
-
-
-
-<script>
-
-    // Calculate years passed since 2020
-
-    const meetingYear = 2020;
-
-    const currentYear = new Date().getFullYear();
-
-    const yearsPassed = currentYear - meetingYear;
-
-
-
-    // Write years passed into the HTML
-
-    document.getElementById('yearsPassed').textContent = yearsPassed;
-
-</script>
-
-
-<p>But it was not until they became best friends that Jesse and Lillian truly realised the depth of their connection. They confided in each other, supported each other, and cherished each other's company in ways they never thought possible. 🫂
-
-
-
-
-
-
-
-
-
-
-
-</p>   </div>
-
-
-
-    <div class="container mt-5" id="songs">
-
-        <h2>The Song 🎵</h2> 
-
-<p>In the quiet moments of solitude, Jesse poured his heart into the creation of his love song, channeling every tiny bit of his feelings and emotions into its melody. 🗣️<br><p></p>Each note carried the weight of his admiration, each verse a reflection of his adoration towards Lillian. Through music, Jesse sought to capture the essence of their connection, immortalising their love story in the timeless lyrics of <strong>"Akamuli ka Lillie."</strong>
-
-🎶
-
-</p>       <br>
-
-        <div class="audio-container">
-
-            <audio controls style="max-width: 100%;">
-
-                <source src="Akamuli ka Lillie.mp3" type="audio/mpeg">
-
-                Your browser does not support the audio element.
-
-            </audio>
-
-        </div>
-
-        <br>
-
-        <p>Click on player to listen</p>
-
-        <br>
-
-        <div class="row">
-
-            <div class="col-md-4">
-
-                <div class="event" data-toggle="modal" data-target="#tourDayModal">
-
-                    <img src="lillie.jpg" alt="Akamuli Ka Lillie" class="img-fluid"><br>   <center>
-
-                        <p>Click on video to Watch</p>
-
-                    </center>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
- 
-
-    <!-- Modals -->
-
-    <div class="modal fade" id="tourDayModal" tabindex="-1" role="dialog" aria-labelledby="tourDayModalLabel"
-
-        aria-hidden="true">
-
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-
-            <div class="modal-content">
-
-                <div class="modal-header">
-
-                    <h5 class="modal-title" id="tourDayModalLabel">Akamuli Ka Lillie</h5>
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-
-                        <span aria-hidden="true">&times;</span>
-
-                    </button>
-
-                </div>
-
-
-
-                <div class="modal-body">
-
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/NKcb40ztds0?si=3igZ9nFBBTbvaE0g"
-
-                        frameborder="0" allowfullscreen></iframe>
-
-                </div>
-
-                <div class="modal-footer">
-
-                    <a href="Akamuli ka Lillie.mp3" class="btn btn-primary">Download Song</a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-         <!-- ======= Gallery Section ======= -->
-        <section id="gallery" class="gallery">
-            <div class="container">
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Gallery</h2>
-                    <p>Check Out Our Lovely Gallery</p>
-                </div>
-                <div class="row g-0" data-aos="fade-left">
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                            <a href="Photo from Fresh Teacher (17).jpg" class="gallery-lightbox">
-                                <img src="https://fresh-teacher.github.io/large/Photo from Fresh Teacher (17).jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div> <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                            <a href="Fresh Teacher and Lillian.jpg" class="gallery-lightbox">
-                                <img src="https://fresh-teacher.github.io/large/Fresh Teacher and Lillian.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div> <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                            <a href="lillie.jpg" class="gallery-lightbox">
-                                <img src="https://fresh-teacher.github.io/large/lillie.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                            <a href="Fresh Teacher Uganda (13).jpg" class="gallery-lightbox">
-                                <img src="https://fresh-teacher.github.io/large/Fresh Teacher Uganda (13).jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                            <a href="Fresh Teacher Uganda (14).jpg" class="gallery-lightbox">
-                                <img src="https://fresh-teacher.github.io/large/Fresh Teacher Uganda (14).jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                            <a href="Fresh Teacher Uganda (16).jpg" class="gallery-lightbox">
-                                <img src="https://fresh-teacher.github.io/large/Fresh Teacher Uganda (16).jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                            <a href="Fresh Teacher Uganda (19).jpg" class="gallery-lightbox">
-                                <img src="https://fresh-teacher.github.io/large/Fresh Teacher Uganda (19).jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                            <a href="Fresh Teacher Uganda (20).jpg" class="gallery-lightbox">
-                                <img src="https://fresh-teacher.github.io/large/Fresh Teacher Uganda (20).jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                            <a href="Fresh Teacher Uganda (4).jpg" class="gallery-lightbox">
-                                <img src="https://fresh-teacher.github.io/large/Fresh Teacher Uganda (4).jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>         
-                               <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                            <a href="Fresh Family.jpg" class="gallery-lightbox">
-                                <img src="https://fresh-teacher.github.io/large/Fresh Family.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                            <a href="The Fresh Family.jpg" class="gallery-lightbox">
-                                <img src="https://fresh-teacher.github.io/large/The Fresh Family.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div><br>
-
-
-        </section>
-        <!-- End Gallery Section -->
-
-        <div class="container mt-5" id="books">
-
-            <h2>LOVE AT LAST SIGHT 📘</h2> 
     
-    <p>Within the pages of <strong>"Love at Last Sight,"</strong> Jesse unfolds the chapters of their love journey with a romantic tone. Like a skilled weaver, he carefully stitches together moments of their shared past, creating a narrative of love that spans the pages of their story. 📖<p></p>Each chapter serves as a living proof to the depth of their connection, a testament to the enduring bond that binds their hearts together. 💝
-    
-    
-    
-    </p>        <div class="embed-responsive embed-responsive-16by9">
-    
-                <iframe src="https://drive.google.com/file/d/1LksOiMVEM1PtCz00931-DyR8vmFDSEjM/preview" width="640" height="480"></iframe>
-    
-            </div>
-    
-           <div class="mt-3">
-    
-                <a href="LOVE AT LAST SIGHT The Love Bible.pdf" class="btn btn-primary" download>Download Book 📥</a><p></p><br>
-                <a href="https://fresh-teacher.github.io/Audio-Books" class="btn btn-primary" download>Listen to the book 🔊</a>
-    
-            </div>
-    
-        </div>
-    
-        <br><br> 
-        <div class="container mt-5" id="books">
-    
-            <h2>THE EYE 📕</h2> 
-    
-            <p>Step into the magical realm of <strong>"The Eye"</strong>, a captivating novel penned by the talented wordsmith, Kimuli Bob. Within its pages, you'll discover a love story that unfolds amidst a tapestry of mystery and romance. With masterful strokes of his pen, Bob blurs the boundaries between reality and fantasy, weaving a tale that tugs at the heartstrings and ignites the imagination. From the very first page, readers are drawn into a lyrical journey that brings to life the characters of Jesse and Lillian.</p>
-            
-    
-    </p>        <div class="embed-responsive embed-responsive-16by9">
-    
-<iframe src="https://drive.google.com/file/d/1UQ6qlsiyGT2OCFnpdB6vaHwjQLeGuOT6/preview" width="640" height="480"></iframe>
-    
-            </div>
-    
-            <div class="mt-3">
-    
-                <a href="The Eye.pdf" class="btn btn-primary" download>Download the book</a>
-    
-            </div>
-    
-        </div>
-        <div class="comments">
-            <div class="counter">
-                <div class="reactions">
-                    <img class="like" src="https://akamuli-ka-lillie.vercel.app/avatar1.jpg" /> <img class="love" src="https://akamuli-ka-lillie.vercel.app/avatar10.jpg" /> <img class="care"
-                        src="https://akamuli-ka-lillie.vercel.app/avatar19.jpg" /> <span id="likes">24.7k Views</span>
-                </div>
-                <span id="comments"><i class="far fa-comment"></i> 23 Comments </span>
-            </div>
-            <div class="bar">
-                <span class="react"><i class="fas fa-thumbs-up"></i> <a class="liked">894 Likes</a></span> <span
-                    class="react"><i class="fas fa-flag"></i> Report</span> 
-                   <!-- Add the "Share" button with an ID -->
-<span class="react" id="share-button"><i class="fa fa-share"></i> Share</span>
-
-    
-            </div>
-            <div>
-                <div class="comment">
-                </div>
-            </div>
-            <div class="comment">
-                <img src="https://akamuli-ka-lillie.vercel.app/kalalu ivan.jpg" />
-                <div class="single-container">
-                    <span class="user"> Joseph Emmanuel </span>
-                    <span class="text">
-                        Love at Last Sight brought tears to my eyes! Such a beautiful story. 🥺
-                    </span>
-                </div>
-                <div class="buttons"> <span class="action liked">Like</span> · <span class="action">Reply</span></div>
-            </div>
-            <div class="comment">
-                <img
-                    src="https://1.bp.blogspot.com/--d2BBdGugW8/XpdlXRvB-HI/AAAAAAAAAJ8/xcstaPQkWoszaizR_rkK2Nc5L7xN2o7WACLcBGAsYHQ/s1600/FB_IMG_15869726679037399.jpg" />
-                <div class="single-container"><span class="user">David Anthony</span> <span class="text">The story fresh teacher told us in the love bible are too good to be true. Can it happen??? 🤔🤨
-                </span></div>
-                <div class="buttons"> <span class="action liked">Like</span> · <span class="action">Reply</span></div>
-            </div>
-            <div class="comment reply">
-                <img
-                    src="https://1.bp.blogspot.com/-UQW1DxDR9Ko/XpdlghF8wJI/AAAAAAAAAKU/EXuIMhMGNeED6BwLWbxkGgtBe3HL0RTTACLcBGAsYHQ/s1600/FB_IMG_15869730921979436.jpg" />
-                <div class="single-container"><span class="user">Nantongo Catherine </span> <span class="text"> 
-                        alimba alimba 🤣🤪</span></div>
-                <div class="buttons"> <span class="action liked">Like</span> · <span class="action">Reply</span></div>
-            </div>
-            <!-- Bonolo's last comment -->
-            <div class="comment">
-                <img
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhETuUnZKp3TrK9zDTqBtlN4ahx1RrCH6RqG14wW5J8CIBv6HYs7gQSvAiZBwn8NT3lXcz3h8jR87s1z_qZ2kzEoZ7HRnWzskSuqK5NOfKyiQByU3BgypGHXP-m9LlPyFh2FhIsUdN6cO1DnZb-GTtRMDQk8L75NDDUnEC4JxQ6OwsnAjbKVhhlNxrLyQ/s320/9F5D4C76-9CCB-45EB-BA73-73A125849593.jpeg">
-                <div class="single-container">
-                    <span class="user">Bonolo Grace</span>
-                    <span class="text">Akamuli ka Lillie is on repeat! Can't get enough of it 🎧</span>
-                </div>
-                <div class="buttons">
-                    <span class="action liked">Like</span> <span class="dot">·</span>
-    
-                    <span class="action">Reply</span>
-                </div>
-            </div>
-             <!-- Add a container for hidden comments -->
-             <div class="hidden-comments hidden">
-                <!-- Ngozi Annet's comment -->
-    <div class="comment">
-        <img src="avatar1.jpg" />
-        <div class="single-container">
-            <span class="user">Ngozi Annet</span>
-            <span class="text">OMG! I just finished reading Love at Last Sight, and I'm speechless 😍</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>
-    </div>
-                 <div class="comment">
-                <img
-                    src="https://akamulikalillie.vercel.app/avatar17.jpg" />
-                <div class="single-container"><span class="user">Mukisa Nicholas</span> <span class="text">bafuka wa mu comment section?? 🍆
-                </span></div>
-                <div class="buttons"> <span class="action liked">Like</span> · <span class="action">Reply</span></div>
-            </div>
-            <div class="comment reply">
-                <img
-                    src="https://akamulikalillie.vercel.app/avatar17.jpg" />
-                <div class="single-container"><span class="user">Mugwanya Paul </span> <span class="text"> 
-                        olaba porno? 🎦</span></div>
-                <div class="buttons"> <span class="action liked">Like</span> · <span class="action">Reply</span></div>
-            </div>
-    
-    <!-- Kato Joseph's comment -->
-    <div class="comment">
-        <img src="avatar2.jpg" />
-        <div class="single-container">
-            <span class="user">Kato Joseph</span>
-            <span class="text">am here to read comments,👀</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Aminata Esther's comment -->
-    <div class="comment">
-        <img src="avatar3.jpg" />
-        <div class="single-container">
-            <span class="user">Aminata Esther</span>
-            <span class="text">Akamuli ka Lillie is my new favourite song! It's so beautiful ❤️🎶</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Chinwendu Moses's comment -->
-    <div class="comment">
-        <img src="avatar4.jpg" />
-        <div class="single-container">
-            <span class="user">Lubega Moses</span>
-            <span class="text">Mwana your love books are like those of Shakespeare. Can't wait to read it again.</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Kagiso Gabriel's comment -->
-    <div class="comment">
-        <img src="avatar5.jpg" />
-        <div class="single-container">
-            <span class="user">Kagiso Gabriel</span>
-            <span class="text"> someone plz kiss ma comment </span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">57 Likes</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Aisha Solomon's comment -->
-    <div class="comment">
-        <img src="avatar6.jpg" />
-        <div class="single-container">
-            <span class="user">Aisha Solomon</span>
-            <span class="text">Akamuli ka Lillie's melody is stuck in my head! It's so catchy 🎵</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Obi Peter's comment -->
-    <div class="comment">
-        <img src="avatar7.jpg" />
-        <div class="single-container">
-            <span class="user">Obi Peter</span>
-            <span class="text">Love at Last Sight is a heartwarming tale of true love! 😊</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Akosua Mary's comment -->
-    <div class="comment">
-        <img src="avatar8.jpg" />
-        <div class="single-container">
-            <span class="user">Akosua Mary</span>
-            <span class="text">The Eye kept me guessing until the very end! Such a thrilling read.</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Kwabena Paul's comment -->
-    <div class="comment">
-        <img src="avatar9.jpg" />
-        <div class="single-container">
-            <span class="user">Kwabena Paul</span>
-            <span class="text"> Mutulina man. R u in Uganda Empya?!</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Simba John's comment -->
-    <div class="comment">
-        <img src="avatar10.jpg" />
-        <div class="single-container">
-            <span class="user">Simba John</span>
-            <span class="text">Fresh Teacher never disappoints!The author has a gift for storytelling that is truly fantastic. His books are a living proof to his talent and creativity.</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Tariro Daniel's comment -->
-    <div class="comment">
-        <img src="avatar11.jpg" />
-        <div class="single-container">
-            <span class="user">Tariro Daniel</span>
-            <span class="text">The Eye is a mind-bending thriller! Kept me on the edge of my seat.</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Zanele Grace's comment -->
-    <div class="comment">
-        <img src="avatar12.jpg" />
-        <div class="single-container">
-            <span class="user">Zanele Grace</span>
-            <span class="text">Akamuli ka Lillie's lyrics are so poetic! Absolutely love it 💕</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Mpho Samuel's comment -->
-    <div class="comment">
-        <img src="avatar17.jpg" />
-        <div class="single-container">
-            <span class="user">Mpho Samuel</span>
-            <span class="text">Love at Last Sight made me believe in true love again! 😊</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Chidinma Emmanuel's comment -->
-    <div class="comment">
-        <img src="avatar14.jpg" />
-        <div class="single-container">
-            <span class="user">Chidinma Emmanuel</span>
-            <span class="text">The Eye is a page-turner! Couldn't stop reading until I reached the end.</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Munyaradzi Michael's comment -->
-    <div class="comment">
-        <img src="avatar15.jpg" />
-        <div class="single-container">
-            <span class="user">Munyaradzi Michael</span>
-            <span class="text">Akamuli ka Lillie's chorus is so catchy! Can't stop humming it.</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Chiamaka Andrew's comment -->
-    <div class="comment">
-        <img src="avatar16.jpg" />
-        <div class="single-container">
-            <span class="user">Chiamaka Andrew</span>
-            <span class="text">Love at Last Sight touched my heart! Such a beautiful story of love.</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Chizoba David's comment -->
-    <div class="comment">
-        <img src="avatar17.jpg" />
-        <div class="single-container">
-            <span class="user">Ssebuliba David</span>
-            <span class="text">Guyz reading comments is better than reading the novels 🤭🫢</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Thabo Isaac's comment -->
-    <div class="comment">
-        <img src="avatar18.jpg" />
-        <div class="single-container">
-            <span class="user">Thabo Isaac</span>
-            <span class="text">Akamuli ka Lillie's melody is so enchanting! Can't get enough of it.</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Buhle Benjamin's comment -->
-    <div class="comment">
-        <img src="avatar19.jpg" />
-        <div class="single-container">
-            <span class="user">Buhle Benjamin</span>
-            <span class="text">Love at Last Sight is a must-read for anyone who believes in love! ❤️</span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-    <!-- Thandiwe Joshua's comment -->
-    <div class="comment">
-        <img src="avatar17.jpg" />
-        <div class="single-container">
-            <span class="user">Thandiwe Joshua</span>
-            <span class="text">am selling pop corns in da comment section </span>
-        </div>
-        <div class="buttons">
-            <span class="action liked">Like</span> <span class="dot">·</span>
-
-            <span class="action">Reply</span>
-        </div>    </div>
-    
-   
-        </div>
-        </div>
-
-        
-        <div class="input"><input placeholder="Write a comment..." />
-            <div class="disabled-comments">
-                <p>Comments have been disabled!</p>
-            </div>
-        </div>
-        <br><br>
-    
-    
-        <!-- Bootstrap JS and Popper.js scripts -->
-    
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    
-    
-    
-        <!-- Footer -->
-    
-        <footer class="footer" id="contact">
-    
-            <div class="container">
-    
-                <p>&copy; Jesse and Family <br>All feelings reserved <span id="currentYear"></span></p>
-    
-                <p><em>Page visits:</em> <span id="visitCount">Loading...</span></p><br>
-    
-            </div>
-    
-        </footer>
-    
-        <!-- End of Footer -->
-    
-    
-    
-        <script>
-           
-      // Get the share button element
-const shareButton = document.getElementById('share-button');
-
-// Add event listener to the share button
-shareButton.addEventListener('click', function () {
-    // Specify the URL to be shared
-    const shareUrl = 'https://akamuli-ka-lillie.vercel.app';
-
-    // Create the WhatsApp share URL with the specified link
-    const whatsappShareUrl = `whatsapp://send?text=${encodeURIComponent(shareUrl)}`;
-
-    // Open the WhatsApp share URL in a new window
-    window.open(whatsappShareUrl);
-});
-
+    <h3 class="checker" onclick="checkSupport()">🔊</h3>
+    <section>
+        <div id="customise-options">
+            <br><label id="voice-label">
                
-            // Retrieve and display visit count from localStorage or set to 26
+                <div id="voice-container"> Select Voice :<br>
+                    <select id="select-voice">
+                        <option value="Daniel">Default Voice</option>
+                        <option value="UK English Female">USA Female Voice</option>
+                        <option value="UK English Male">USA Male Voice</option>
+                        <option value="US English Female">UK Female Voice</option>
+                        <option value="Dutch Female">UK Male Voice</option>
+                        <option value="US English Male">African Male Voice</option>
+                        <option value="Australian Female">African Female Voice</option>
+                        <option value="Japanese Female">Japanese Female Voice</option>
+                        <option value="Korean Female">Korean Female Voice</option>
+                    </select>                      
+                </div><br>
+                <label id="repeat-label">
+                    <b>Playback Mode:</b>
+                    <div id="repeat-container">
+                        <select id="select-repeat">
+                            <option value="repeat">Repeat One</option>
+                            <option value="next">Loop All</option>
+                        </select>                      
+                    </div>
+                </label>
+                
+            </label>   
+            <!-- <label id="speed-label">
+                Select Speech Speed :
+                <div id="speed-container">
+                    <input id="select-speed" type="range" class="topcoat-range" min="0" max="1.5" value="1" step="0.1" onchange="setSpeed(this.value)">
+                </div>
+            </label>    -->
+     <!-- Add select element for choosing text files -->
+<label id="text-label">
+    <br><b>Select Chapter :</b>
+    <div id="text-container">
+        <select id="select-text">
+            <option value="table of contents.txt">Table of Contents</option>
+            <option value="prologue.txt">Prologue</option>
+            <option value="acknowledgement.txt">Acknowledgement</option>
+            <option value="preface.txt">Preface</option>
+            <option value="aurthors note.txt">Author's Note</option>   
+            <option value="Genesis.txt">Genesis</option>
+            <option value="the first valentine gift.txt">The First Valentine Gift</option>
+            <option value="exodus.txt">Exodus</option>
+            <option value="the surprise invitation.txt">The Surprise Invitation</option>
+            <option value="lillies siblings.txt">Lillie's Siblings</option>
+            <option value="a friend in need is a friend indeed.txt">A Friend in Need is a Friend Indeed</option>
+            <option value="bestie wa me.txt">Bestie Wa Me</option>
+            <option value="the forbidden fruit tastes sweeter.txt">The Forbidden Fruit Tastes Sweeter</option>
+            <option value="honey is sweet but bees bite.txt">Honey is Sweet But Bees Bite</option>
+            <option value="valentines day.txt">Valentine's Day</option>
+            <option value="party after party.txt">Party After Party</option>
+            <option value="chronicles.txt">Chronicles</option>
+            <option value="for god and my love.txt">For God and my Love</option>
+            <option value="it is what it is.txt">It Is What It Is</option>
+            <option value="1000 names of lillian.txt">1000 Names of Lillian</option>
+            <option value="my birthday party.txt">My Birthday Party</option>
+            <option value="let sleeping dogs lie.txt">Let Sleeping Dogs Lie</option>
+            <option value="love at first sight.txt">Love at First Sight</option>
+            <option value="lamentations.txt">Lamentations</option>
+            <option value="love at last.txt">Love at Last</option>
+            <option value="MYOB.txt">MYOB</option>
+            <option value="Revelation.txt">Revelation</option>
+        </select>
+    </div>
+</label>                                  
+
+        </div>
+        <div class="button-row">
+            <button id="stop-button" class="topcoat-button" onclick="stopSpeech()">STOP</button>
+            <button id="speak-button" class="topcoat-button--cta" onclick="loadText()">READ</button>            
+        </div><br>
+        <!-- Add a download button for audio files -->
+        <center><button id="download-audio" class="topcoat-button" style="display: none; background-color: green; width: 180px;" onclick="downloadAudio()">Download 🔊</button>
+        </center><p></p>
+        <div id="novel-content" class="topcoat-textarea mousetrap">Select a chapter from the dropdown menu and click on the "READ" button to load its contents here...</div>             
+
+        <div id="links">
+            <ul>
+                <li>
+                    <a href="https://akamuli-ka-lillie.vercel.app" target="_blank">
+                            <img src="images/github.png" alt="Logo of github Octocat anchoring to the GitHub page of Online TTS">
+                    </a>
+                </li>
+                <li>
+                    <img src="images/help.png" alt="Image of a question mark which on click provides info about how to use Online TTS" onclick="info()">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <br>
+   <!-- Footer -->
     
-            let visitCount = parseInt(localStorage.getItem('visitCount')) || 26;
+   <footer class="footer" id="contact">
     
-            document.getElementById('visitCount').textContent = visitCount + ' people have so far visited this page';
+    <div class="container">
+
+        <p>&copy; Jesse and Family <br>All feelings reserved <span id="currentYear"></span></p>
+
+
+    </div>
+
+</footer>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="voiceModal" tabindex="-1" aria-labelledby="voiceModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="voiceModalLabel">Voice Not Supported</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Unfortunately, the <b>Default Voice</b> is not supported in this chapter. Please select an alternative voice from the list below and try again...</p>
+                <label for="select-voice-modal">Select Alternative Voice:</label>
+                <select id="select-voice-modal" class="form-control">
+                    <option value="UK English Female">USA Female Voice</option>
+                    <option value="UK English Male">USA Male Voice</option>
+                    <option value="US English Female">UK Female Voice</option>
+                    <option value="Dutch Female">UK Male Voice</option>
+                    <option value="US English Male">African Male Voice</option>
+                    <option value="Australian Female">African Female Voice</option>
+                    <option value="Japanese Female">Japanese Female Voice</option>
+                    <option value="Korean Female">Korean Female Voice</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="selectAlternativeVoice()">Select Voice</button>
+            </div>
+        </div>
+    </div>
+</div>
     
-    
-    
-            // Increment visit count every 50 seconds
-    
-            setInterval(function () {
-    
-                visitCount += 7;
-    
-                localStorage.setItem('visitCount', visitCount);
-    
-                document.getElementById('visitCount').textContent = visitCount + ' people have so far visited this page';
-    
-            }, 50000); // 50 seconds
-    
-    
-    
-            // Update current year in the footer
-    
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-    
-        </script>
-    
-    
-    
-        </body>
-    
-    
-    
-    </html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=R06QTECg"></script>
+    <script type="text/javascript" src="js/mousetrap.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script>
+        
+function selectAlternativeVoice() {
+    // Get the selected voice from the modal dropdown menu
+    let selectedVoice = document.getElementById('select-voice-modal').value;
+    // Set the selected voice in the main select voice dropdown menu
+    document.getElementById('select-voice').value = selectedVoice;
+    // Hide the modal
+    $('#voiceModal').modal('hide');
+    // Load text with the selected alternative voice
+    loadText();
+}
+
+
+        // List of text files in chronological order
+        const textFiles = [
+            "table of contents.txt",
+            "prologue.txt",
+            "acknowledgement.txt",
+            "preface.txt",
+            "aurthors note.txt",
+            "Genesis.txt",
+            "the first valentine gift.txt",
+            "exodus.txt",
+            "the surprise invitation.txt",
+            "lillies siblings.txt",
+            "a friend in need is a friend indeed.txt",
+            "bestie wa me.txt",
+            "the forbidden fruit tastes sweeter.txt",
+            "honey is sweet but bees bite.txt",
+            "valentines day.txt",
+            "party after party.txt",
+            "chronicles.txt",
+            "for god and my love.txt",
+            "it is what it is.txt",
+            "1000 names of lillian.txt",
+            "my birthday party.txt",
+            "let sleeping dogs lie.txt",
+            "love at first sight.txt",
+            "lamentations.txt",
+            "love at last.txt",
+            "MYOB.txt",
+            "Revelation.txt"
+        ];
+
+        // List of audio files corresponding to the text files
+        const audioFiles = [
+            "https://fresh-teacher.github.io/Audio-Books/Table of Contents.mp3",
+            "https://fresh-teacher.github.io/Audio-Books/Prologue.mp3",
+            "https://fresh-teacher.github.io/Audio-Books/Acknowledgement.mp3",
+            "https://fresh-teacher.github.io/Audio-Books/Preface.mp3",
+            "https://fresh-teacher.github.io/Audio-Books/Author's Note.mp3",
+            "https://fresh-teacher.github.io/video-maker/Genesis.mp3",
+            "https://fresh-teacher.github.io/video-maker/The First Valentine Gift.mp3",
+            "https://fresh-teacher.github.io/video-maker/Exodus.mp3",
+            "https://fresh-teacher.github.io/video-maker/The Surprise Invitation.mp3",
+            "https://fresh-teacher.github.io/video-maker/Lillian's Siblings.mp3",
+            "https://fresh-teacher.github.io/video-maker/A Friend in Need is a Friend Indeed.mp3",
+            "https://fresh-teacher.github.io/video-maker/Bestie wa Me.mp3",
+            "https://fresh-teacher.github.io/video-maker/The Forbidden Fruit Tastes Sweeter.mp3",
+            "https://fresh-teacher.github.io/video-maker/Honey is Sweet But Bees Bite.mp3",
+            "https://fresh-teacher.github.io/video-maker/Valentines Day.mp3",
+            "https://fresh-teacher.github.io/video-maker/Party After Party.mp3",
+            "https://fresh-teacher.github.io/video-maker/Chronicles.mp3",
+            "https://fresh-teacher.github.io/video-maker/For God and My Love.mp3",
+            "https://fresh-teacher.github.io/video-maker/It is what it is.mp3",
+            "https://drive.google.com/uc?export=download&id=1NtlqDx6kpeS6s0Xv6LFdOR7ZajEK4j_4",
+            "https://drive.google.com/uc?export=download&id=1NtlqDx6kpeS6s0Xv6LFdOR7ZajEK4j_4",
+            "https://drive.google.com/uc?export=download&id=1NtlqDx6kpeS6s0Xv6LFdOR7ZajEK4j_4",
+            "https://drive.google.com/uc?export=download&id=1NtlqDx6kpeS6s0Xv6LFdOR7ZajEK4j_4",
+            "https://drive.google.com/uc?export=download&id=1NtlqDx6kpeS6s0Xv6LFdOR7ZajEK4j_4",
+            "https://drive.google.com/uc?export=download&id=1NtlqDx6kpeS6s0Xv6LFdOR7ZajEK4j_4",
+            "https://drive.google.com/uc?export=download&id=1NtlqDx6kpeS6s0Xv6LFdOR7ZajEK4j_4",
+            "https://drive.google.com/uc?export=download&id=1NtlqDx6kpeS6s0Xv6LFdOR7ZajEK4j_4",
+        ];
+
+        // Function to check if audio is available for the selected chapter
+    function checkAudioAvailability() {
+        let selectElement = document.getElementById('select-text');
+        let selectedText = selectElement.options[selectElement.selectedIndex].value;
+        let selectedAudioIndex = textFiles.indexOf(selectedText);
+        if (selectedAudioIndex !== -1 && audioFiles[selectedAudioIndex] !== "") {
+            document.getElementById('download-audio').style.display = "block";
+        } else {
+            document.getElementById('download-audio').style.display = "none";
+        }
+    }
+
+// Function to load and play the next chapter
+function loadAndPlayNextChapter(currentIndex) {
+    currentIndex++;
+    // If all text files have been read, reset to the beginning
+    if (currentIndex >= textFiles.length) {
+        currentIndex = 0;
+    }
+    // Load the next text file
+    let nextText = textFiles[currentIndex];
+    fetch(nextText)
+        .then(response => response.text())
+        .then(nextTextContent => {
+            document.getElementById('novel-content').innerText = nextTextContent;
+            // Update the selected option in the dropdown menu
+            let selectElement = document.getElementById('select-text');
+            for (let i = 0; i < selectElement.options.length; i++) {
+                if (selectElement.options[i].value === nextText) {
+                    selectElement.selectedIndex = i;
+                    break;
+                }
+            }
+            // Play the audio associated with the selected text file
+            let audio = new Audio(audioFiles[currentIndex]);
+            audio.play();
+            // When the audio ends, load and play the next chapter
+            audio.addEventListener('ended', () => loadAndPlayNextChapter(currentIndex));
+        })
+        .catch(error => console.error('Error reading next text:', error));
+}
+
+
+// Function to load and play the selected chapter
+function loadText() {
+    // Get the selected text file from the dropdown menu
+    let selectElement = document.getElementById('select-text');
+    let selectedText = selectElement.options[selectElement.selectedIndex].value;
+    let selectedVoice = document.getElementById('select-voice').value;
+    let repeatOption = document.getElementById('select-repeat').value;
+
+    // Load the text content from the selected text file
+    fetch(selectedText)
+        .then(response => response.text())
+        .then(text => {
+            // Display the text content on the page
+            document.getElementById('novel-content').innerText = text;
+
+            // Get the index of the selected text file
+            let index = textFiles.indexOf(selectedText);
+
+            // If the selected voice is "Daniel"
+            if (selectedVoice === 'Daniel') {
+                if (index !== -1) {
+                    // Check if the selected chapter has a Google Drive link
+                    let isGoogleDriveLink = audioFiles[index].includes("drive.google.com");
+                    if (isGoogleDriveLink) {
+                        // Display modal warning about Google Drive link with Daniel voice
+                        $('#voiceModal').modal('show');
+                        return; // Stop execution
+                    } else {
+                        // Play the audio associated with the selected text file
+                        let audio = new Audio(audioFiles[index]);
+                        audio.play();
+                        // When the audio ends, load and play the next chapter or repeat the current chapter
+                        audio.addEventListener('ended', () => {
+                            if (repeatOption === 'next') {
+                                loadAndPlayNextChapter(index);
+                            } else {
+                                loadText(); // Repeat the current chapter
+                            }
+                        });
+                    }
+                }
+            } else {
+                // Speak the text content using responsive voice
+                responsiveVoice.speak(text, selectedVoice, {
+                    onend: function () {
+                        // Load and play the next chapter or repeat the current chapter
+                        if (repeatOption === 'next') {
+                            loadAndPlayNextChapter(index);
+                        } else {
+                            responsiveVoice.speak(text, selectedVoice);
+                        }
+                    }
+                });
+            }
+        })
+        .catch(error => console.error('Error reading selected text:', error));
+}
+
+
+
+// Function to load and play the next chapter
+function loadAndPlayNextChapter(currentIndex) {
+    currentIndex++;
+    // If all text files have been read, reset to the beginning
+    if (currentIndex >= textFiles.length) {
+        currentIndex = 0;
+    }
+    // Load the next text file
+    let nextText = textFiles[currentIndex];
+    fetch(nextText)
+        .then(response => response.text())
+        .then(nextTextContent => {
+            document.getElementById('novel-content').innerText = nextTextContent;
+            // Update the selected option in the dropdown menu
+            let selectElement = document.getElementById('select-text');
+            for (let i = 0; i < selectElement.options.length; i++) {
+                if (selectElement.options[i].value === nextText) {
+                    selectElement.selectedIndex = i;
+                    break;
+                }
+            }
+            // Play the audio associated with the selected text file
+            let audio = new Audio(audioFiles[currentIndex]);
+            audio.play();
+            // When the audio ends, load and play the next chapter
+            audio.addEventListener('ended', () => loadAndPlayNextChapter(currentIndex));
+        })
+        .catch(error => console.error('Error reading next text:', error));
+}
+
+
+function stopSpeech() {
+    // Stop the ResponsiveVoice speech
+    responsiveVoice.cancel();
+
+    // Reload the page to stop any audio playback from links
+    location.reload();
+}
+
+
+        function checkSupport() {
+            // Check if the default voice (Daniel) is selected
+            if (document.getElementById('select-voice').value === 'Daniel') {
+                // Display modal for voice selection
+                $('#voiceModal').modal('show');
+            } else {
+                // Hide the modal
+                $('#voiceModal').modal('hide');
+            }
+        }
+
+        function setSpeed(speed) {
+            // Set the speech speed
+            responsiveVoice.cancel(); // Stop current speech
+            let voice = document.getElementById('select-voice').value;
+            responsiveVoice.setDefaultRate(speed);
+            if (voice !== 'Daniel') {
+                let text = document.getElementById('novel-content').innerText;
+                responsiveVoice.speak(text, voice, { rate: speed });
+            }
+        }
+
+        function info() {
+            // Show info about using the TTS
+    alert("GUIDELINES: \n1. Voice Selection: You can choose your preferred voice for text-to-speech conversion by selecting from the dropdown menu labelled 'Select Voice.' The available voices include options such as USA Female Voice, USA Male Voice, UK Female Voice, etc.\n\n3. Playback Mode: You may choose between two playback modes: 'Repeat One' and 'Loop All' from the dropdown menu labelled 'Playback Mode.' 'Repeat One' repeats the current chapter continuously, while 'Loop All' automatically moves to the next chapter after the current one finishes.\n\n4. Chapter Selection: You can select the desired chapter from the dropdown menu labelled 'Select Chapter.' The available chapters are listed in chronological order, making it easy for you to find and select the chapter you wanna to listen to.\n\n5. Playback Controls: The 'READ' button initiates the text-to-speech conversion for the selected chapter. The 'STOP' button allows you to stop the speech playback at any time.\n\n6. Additional Features: You may access additional information by clicking on the icon of Jesse and Lillian. \n\nEnjoy the experience! 😊");
+        }
+
+        function downloadAudio() {
+            // Get the selected text file
+            let selectedText = document.getElementById('select-text').value;
+            // Get the index of the selected text file in the textFiles array
+            let index = textFiles.indexOf(selectedText);
+            // Create a temporary anchor element to trigger download
+            let link = document.createElement('a');
+            link.href = audioFiles[index];
+            link.download = selectedText.split('.')[0] + '.mp3';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+
+            // Function to download the audio file for the selected chapter
+    function downloadAudio() {
+        let selectElement = document.getElementById('select-text');
+        let selectedText = selectElement.options[selectElement.selectedIndex].value;
+        let selectedAudioIndex = textFiles.indexOf(selectedText);
+        if (selectedAudioIndex !== -1) {
+            let audioFile = audioFiles[selectedAudioIndex];
+            let link = document.createElement('a');
+            link.href = audioFile;
+            link.download = audioFile.split('/').pop();
+            link.click();
+        } else {
+            console.error('Audio file not found for the selected chapter');
+        }
+    }
+
+    // Initial check if the default chapter is the table of contents
+    document.addEventListener("DOMContentLoaded", function () {
+        checkAudioAvailability();
+    });
+    </script>
+</body>
+</html>
