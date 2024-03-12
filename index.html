@@ -229,6 +229,22 @@ top: 1%;
 color: #000;
 
 }
+        /* CSS for pulsating animation */
+        @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .btn-pulse {
+        animation: pulse 1.5s infinite;
+    }
                 </style>
 </head>
 
@@ -255,6 +271,7 @@ color: #000;
     }
 
 
+    
 
     function updateSnowflakes() {
 
@@ -269,6 +286,7 @@ color: #000;
     for (let i = 0; i < 30; i++) createSnowflake(), snowflakes.push(snowflakeContainer.lastChild);
 
     updateSnowflakes();
+
 
 </script>
 <body>
@@ -424,11 +442,11 @@ color: #000;
         <center><button id="download-audio" class="topcoat-button" style="display: none; background-color: green; width: 180px;" onclick="downloadAudio()">Download 🔊</button>
         </center><p></p>
         <div id="novel-content" class="topcoat-textarea mousetrap">Select a chapter from the dropdown menu and click on the "READ" button to load its contents here...</div>             
-
+<br>
         <div id="links">
             <ul>
                 <li>
-                    <a href="https://akamuli-ka-lillie.vercel.app" target="_blank">
+                    <a href="app.apk" target="_blank">
                             <img src="images/github.png" alt="Logo of github Octocat anchoring to the GitHub page of Online TTS">
                     </a>
                 </li>
@@ -437,8 +455,14 @@ color: #000;
                 </li>
             </ul>
         </div>
+        <div class="container mt-5" id="biography">
+            <br>
+            <center><div class="container mt-5">
+                💘  <a href="https://akamuli-ka-lillie.vercel.app/indexes.html" class="btn btn-danger btn-pulse">DISCOVER MORE </a>  💘
+            </div></center>
     </section>
     <br>
+    
    <!-- Footer -->
     
    <footer class="footer" id="contact">
